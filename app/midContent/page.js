@@ -1,7 +1,14 @@
+
+
+
+
+
+
 import { EChallanContentPart2 } from "@/lib/contentPart2/page";
 
 export default function ContentRenderer() {
   return (
+    
     <section className="px-3 lg:px-32 space-y-6">
       {EChallanContentPart2.map((item, idx) => (
         <div key={idx} className=" bg-white rounded-xl shadow-md p-6 mb-6">
