@@ -29,45 +29,38 @@ export default function Header() {
           <nav className="hidden sm:flex items-center gap-8 text-lg font-semibold">
             <Link
               href="/"
-              className="text-black/90 hover:text-black transition"
+              className="text-black/90 hover:text-green-700 transition"
             >
               PSCE E-Challan{" "}
             </Link>
             <Link
               href="/"
-              className="text-black/90 hover:text-black transition"
+              className="text-black/90 hover:text-green-700 transition"
             >
               E-Challan Punjab{" "}
             </Link>
             <Link
               href="/"
-              className="text-black/90 hover:text-black transition"
+              className="text-black/90 hover:text-green-700 transition"
             >
               E-Challan Sindh{" "}
             </Link>
             <Link
               href="/e-challan-forn"
-              className="text-black/90 hover:text-black transition"
+              className="text-black hover:text-green-700 transition"
             >
               Search Challan
             </Link>
-            <Link
-              href="#contact"
-              className="text-black/90 hover:text-black transition"
-            >
-              Contact
-            </Link>
           </nav>
-
-          {/* Desktop Button */}
-          <div className="hidden sm:block">
-            <Link
-              href="/e-challan-forn"
-              className="bg-blue-500
-                         text-white px-5 py-2 rounded-md text-base font-semibold"
-            >
-              Search
-            </Link>
+          <div className="flex gap-3">
+            <div className="hidden sm:block">
+              <Link
+                href="#"
+                className="  text-white bg-blue-500 px-5 py-2 rounded-md text-base "
+              >
+                Sing in
+              </Link>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

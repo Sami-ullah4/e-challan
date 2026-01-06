@@ -9,7 +9,7 @@ export default function Hero() {
 
   return (
     <section
-      className="px-2 lg:px-32 py-10 lg:py-20 flex flex-col gap-6 
+      className="px-2 lg:px-32 py-10 lg:py-28 flex flex-col gap-6 
                   bg-cover bg-center"
       style={{ backgroundImage: "url('/heroBackgound.png')" }}
     >
