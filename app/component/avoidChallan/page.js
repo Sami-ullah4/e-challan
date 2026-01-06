@@ -49,15 +49,14 @@ export default function AvoidChallan() {
       </div>
 
       <figure className="px-6 md:px-32 hidden lg:block py-9">
-        <div className="relative w-full h-[420px] rounded-xl overflow-hidden shadow-lg">
+        <div className="  rounded-xl ">
           <Image
             src="/road-challn.webp"
             alt="E-Challan Awareness Illustration"
-            fill
+            width={1200}
+            height={420}
             loading="lazy"
-            sizes="(min-width: 768px) 100vw, 0vw"
-            className="object-cover "
-            priority={false}
+            className="rounded-xl shadow-lg hidden lg:block w-full h-[450px] object-cover"
           />
         </div>
       </figure>

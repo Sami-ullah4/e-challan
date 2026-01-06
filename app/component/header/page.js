@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 export default function Header() {
   return (
-    <header className=" w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
-      <div className="max-w-7xl mx-auto px-4">
+    <header className=" w-full  shadow bg-white">
+      <nav className="px-3 lg:px-30 ">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 text-black">
@@ -61,7 +61,7 @@ export default function Header() {
             ☰
           </button>
         </div>
-      </div>
+      </nav>
     </header>
   );
 }

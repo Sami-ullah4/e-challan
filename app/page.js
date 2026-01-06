@@ -21,7 +21,7 @@ export default function Home() {
             fill
             loading="lazy" // explicit (default anyway)
             sizes="(min-width: 768px) 100vw, 0vw"
-            className="object-cover "
+            className="object-contain "
             priority={false} // ensures lazy load
           />
         </div>
