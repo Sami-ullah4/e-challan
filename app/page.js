@@ -14,15 +14,12 @@ export default function Home() {
 
       {/* Image Section */}
       <figure className="px-6 md:px-32 hidden lg:block">
-        <div className="relative w-full h-[420px] rounded-xl overflow-hidden shadow-lg">
+        <div className="relative w-full h-[400px] rounded-xl">
           <Image
             src="/chalan-image.png"
             alt="E-Challan Awareness Illustration"
             fill
-            loading="lazy" // explicit (default anyway)
-            sizes="(min-width: 768px) 100vw, 0vw"
-            className="object-contain "
-            priority={false} // ensures lazy load
+            className="object-contain"
           />
         </div>
       </figure>
