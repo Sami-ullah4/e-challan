@@ -1,5 +1,5 @@
-export default function CheckChallan(){
-     const stepsData = [
+export default function CheckChallan() {
+  const stepsData = [
     {
       title: "Check E Challan Using CNIC",
       steps: [
@@ -26,33 +26,34 @@ export default function CheckChallan(){
       ],
     },
   ];
-    return<>
-      <section className="px-6 md:px-32 space-y-6">
-        <h2 className="text-2xl font-semibold">
-          How to Check E Challan Online?
-        </h2>
-        <p className="text-gray-700">
-          There are three main methods to check e challan online in Pakistan.
-        </p>
 
-        {/* Map the stepsData array */}
-        <div className="space-y-8">
-          {stepsData.map((item, idx) => (
-            <div
-              key={idx}
-              className="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-600"
-            >
-              <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
-              <ol className="list-decimal list-inside space-y-2 text-gray-700">
-                {item.steps.map((step, i) => (
-                  <li key={i}>{step}</li>
-                ))}
-              </ol>
-            </div>
-          ))}
-        </div>
-      </section>
-    </>
+  return (
+    <section className="px-2 lg:px-32 space-y-3 md:space-y-5">
+      <h2 className="text-2xl lg:text-3xl font-bold ">
+        How to Check E Challan Online?
+      </h2>
 
+      <p className="text-gray-700 text-lg">
+        There are three main methods to check e challan online in Pakistan.
+      </p>
 
+      {/* Grid Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {stepsData.map((item, idx) => (
+          <div
+            key={idx}
+            className="bg-white p-6 rounded-xl shadow-md border-b-4 border-blue-600 hover:shadow-lg transition"
+          >
+            <h3 className="text-2xl font-semibold mb-4">{item.title}</h3>
+
+            <ol className="list-decimal list-inside space-y-2 text-gray-700 text-lg">
+              {item.steps.map((step, i) => (
+                <li key={i}>{step}</li>
+              ))}
+            </ol>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }

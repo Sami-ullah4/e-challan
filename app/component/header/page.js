@@ -1,13 +1,19 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
+    <header className=" w-full z-50 bg-white/10 backdrop-blur-md border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 text-black">
-            <span className="text-2xl">🚔</span>
+            {/* <Image
+              src={"./logo.webp"}
+              alt="Hero Background"
+              width={1200} // desired width
+              height={600} // desired height
+              className="rounded-xl shadow-lg"
+            />{" "} */}
             <div className="leading-tight">
               <div className="font-semibold text-lg">e-Challan</div>
               <div className="text-xs text-black/70">Search & Pay</div>

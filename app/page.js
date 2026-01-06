@@ -10,21 +10,25 @@ export default function Home() {
     <main className="flex flex-col gap-16">
       <Hero />
       <CheckChallan />
-
       <Efrom />
-
       <ContentRenderer />
-      {/* Image Display */}
-      <figure className="px-6 md:px-32">
-        <Image
-          src="/chalan-image.png" // path from public folder
-          alt="Hero Background"
-          width={1200} // desired width
-          height={600} // desired height
-          className="rounded-xl shadow-lg"
-        />
+
+      {/* Image Section */}
+      <figure className="px-6 md:px-32 hidden lg:block">
+        <div className="relative w-full h-[420px] rounded-xl overflow-hidden shadow-lg">
+          <Image
+            src="/chalan-image.png"
+            alt="E-Challan Awareness Illustration"
+            fill
+            loading="lazy" // explicit (default anyway)
+            sizes="(min-width: 768px) 100vw, 0vw"
+            className="object-cover "
+            priority={false} // ensures lazy load
+          />
+        </div>
       </figure>
-      <AvoidChallan/>
+
+      <AvoidChallan />
     </main>
   );
 }

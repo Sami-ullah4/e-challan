@@ -1,69 +1,77 @@
-"use client";
-
-import { useState } from "react";
-import { eChallanContentPart3 } from "@/lib/contentPart2/page";
+import {
+  eChallanContentPart3,
+  eChallanExtraContent4,
+} from "@/lib/contentPart2/page";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function AvoidChallan() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <section className="px-30">
-      {/* Clickable Heading */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full text-left"
-      >
-        <h2 className="text-4xl font-semibold flex items-center justify-between">
-          How to Avoid Getting E Challan?
-          <span className="text-xl">{open ? "−" : "+"}</span>
-        </h2>
-      </button>
+    <section className="px-2  md:px-32 space-y-2 ">
+      {/* Heading */}
+      <h2 className="text-2xl lg:text-3xl py-2  rounded-2xl mb-5 font-bold">
+        How to Avoid Getting E-Challan?
+      </h2>
 
-      {/* Dropdown Card */}
-      <div
-        className={`overflow-hidden transition-all duration-500 ${
-          open ? "max-h-[5000px] mt-6" : "max-h-0"
-        }`}
-      >
-        <div className="bg-white rounded-xl shadow-md p-6 space-y-4 border">
-          {eChallanContentPart3.map((item, index) => {
-            switch (item.type) {
-              case "h1":
-                return (
-                  <h1
-                    key={index}
-                    className="text-2xl font-bold mt-6"
-                  >
-                    {item.content}
-                  </h1>
-                );
+      {/* Intro */}
+      <p className="text-lg max-w-5xl pb-6">
+        Following traffic rules doesn’t just help you avoid an{" "}
+        <Link
+          className="text-blue-600 underline"
+          href="https://echallan.psca.gop.pk/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          E-Challan
+        </Link>
+        , it makes you a responsible citizen. By driving safely and respecting
+        others on the road, you contribute to a smoother, safer, and smarter
+        transportation system in Pakistan.
+      </p>
 
-              case "h2":
-                return (
-                  <h2
-                    key={index}
-                    className="text-xl font-semibold mt-4"
-                  >
-                    {item.content}
-                  </h2>
-                );
+      {/* PART 3 CONTENT CARDS */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {eChallanContentPart3.map((card, index) => (
+          <div
+            key={`part3-${index}`}
+            className="rounded-xl shadow-md p-6 bg-white hover:shadow-lg transition"
+          >
+            <h2 className=" l font-semibold mb-3">{card.h2}</h2>
 
-              case "p":
-                return (
-                  <p
-                    key={index}
-                    className="text-gray-700 leading-relaxed"
-                  >
-                    {item.content}
-                  </p>
-                );
-
-              default:
-                return null;
-            }
-          })}
-        </div>
+            <div
+              className={` text-gray-700 text-lg leading-relaxed space-y-3`}
+              dangerouslySetInnerHTML={{ __html: card.contentWrapper }}
+            />
+          </div>
+        ))}
       </div>
+      <figure className="px-6 md:px-32 hidden lg:block">
+        <div className="relative w-full h-[420px] rounded-xl overflow-hidden shadow-lg">
+          <Image
+            src="/road-challn.webp"
+            alt="E-Challan Awareness Illustration"
+            fill
+            loading="lazy" 
+            sizes="(min-width: 768px) 100vw, 0vw"
+            className="object-cover "
+            priority={false} 
+          />
+        </div>
+      </figure>
+
+      {/* EXTRA CONTENT CARDS */}
+      {eChallanExtraContent4.map((item, index) => (
+        <div
+          key={`extra-${index}`}
+          className="bg-white rounded-xl shadow-md p-6 mb-6"
+        >
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">{item.h2}</h2>
+          <div
+            className={` text-gray-700 text-lg leading-relaxed space-y-3`}
+            dangerouslySetInnerHTML={{ __html: item.contentWrapper }}
+          />
+        </div>
+      ))}
     </section>
   );
 }

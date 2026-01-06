@@ -9,15 +9,15 @@ export default function Hero() {
 
   return (
     <section
-      className="px-6 md:px-32 py-20 flex flex-col gap-6 
+      className="px-2 lg:px-32 py-10 lg:py-20 flex flex-col gap-6 
                   bg-cover bg-center"
       style={{ backgroundImage: "url('/heroBackgound.png')" }}
     >
-      <h1 className="text-3xl md:text-5xl font-bold text-white max-w-4xl">
+      <h1 className="text-3xl md:text-5xl font-bold text-white max-w-4xl ">
         check your challan online
       </h1>
 
-      <p className="text-white/90 max-w-4xl text-base md:text-lg">
+      <p className="text-white/90 max-w-4xl text-lg ">
         Are you looking to pay your e-challan? You can now pay your traffic
         challan online using the government of Pakistan&apos;s digital challan
         system. In today&apos;s guide, we will walk you through the Pakistani
@@ -27,8 +27,7 @@ export default function Hero() {
 
       <button
         onClick={scrollToForm}
-        className="mt-6 bg-white text-blue-600 hover:bg-gray-100
-                   px-8 py-3 rounded-md font-medium w-fit transition-all duration-300"
+        className=" text-white bg-blue-600  py-3 w-32   rounded-md font-medium "
       >
         Check Challan
       </button>
