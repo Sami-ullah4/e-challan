@@ -173,7 +173,7 @@ export default function AvoidChallan() {
           width={1200}
           height={420}
           loading="lazy"
-          className="rounded-xl shadow-lg w-full h-[450px] object-cover"
+          className="rounded-xl shadow-lg w-full h-112.5 object-cover"
         />
       </figure>
 

@@ -7,7 +7,7 @@ export default function Header() {
       <nav className="px-3 lg:px-30 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 text-black ">
-          <figure className="relative w-[42px] h-[42px] bg-pink-800">
+          <figure className="relative w-10.5 h-10.5 bg-pink-800">
             <Image
               src="/logo.webp"
               alt="e-Challan Logo"

@@ -16,7 +16,7 @@ export default function Home() {
 
       {/* Image Section */}
       <figure className="px-6 md:px-32 hidden lg:block">
-        <div className="relative w-full h-[350px] rounded-xl">
+        <div className="relative w-full h-87.5 rounded-xl">
           <Image
             src="/chalan-image.png"
             alt="E-Challan Awareness Illustration"
