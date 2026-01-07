@@ -35,10 +35,13 @@ const PayChallan = () => {
   return (
     <section
       id="pay-challan"
-      className="bg-gradient-to-b from-slate-100 via-slate-50 to-white py-14 sm:py-5"
+      className="bg-gradient-to-b from-slate-100 via-slate-50 to-white py-14 sm:py-20"
     >
       {/* Heading */}
       <div className="mx-auto mb-10 max-w-3xl space-y-4 px-4 text-center sm:px-6 lg:px-8">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
+          Step 3 • Pay securely
+        </p>
         <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl md:text-4xl">
           How to Pay E-Challan in Pakistan?
         </h2>
@@ -54,9 +57,17 @@ const PayChallan = () => {
         {/* JazzCash */}
         <div className="flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-sm shadow-slate-200">
           <div className="flex items-center justify-between gap-3">
-            <h3 className="text-xl font-semibold text-slate-900">
-              Pay via JazzCash
-            </h3>
+            <div className="text-left">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-600">
+                Digital wallet
+              </p>
+              <h3 className="text-xl font-semibold text-slate-900">
+                Pay via JazzCash
+              </h3>
+            </div>
+            <span className="rounded-full bg-orange-50 px-3 py-1 text-xs font-medium text-orange-700">
+              Recommended
+            </span>
           </div>
 
           {renderStepList(jazzCashSteps)}
@@ -65,9 +76,17 @@ const PayChallan = () => {
         {/* Easypaisa */}
         <div className="flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-sm shadow-slate-200">
           <div className="flex items-center justify-between gap-3">
-            <h3 className="text-xl font-semibold text-slate-900">
-              Pay via Easypaisa
-            </h3>
+            <div className="text-left">
+              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-600">
+                Digital wallet
+              </p>
+              <h3 className="text-xl font-semibold text-slate-900">
+                Pay via Easypaisa
+              </h3>
+            </div>
+            <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
+              Popular
+            </span>
           </div>
 
           {renderStepList(easypaisaSteps)}

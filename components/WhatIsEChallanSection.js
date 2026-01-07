@@ -23,14 +23,17 @@ const WhatEchallan = () => {
 
           {/* Content Section */}
           <div className="space-y-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
+              Overview
+            </p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
               What is E-Challan in Pakistan?
             </h2>
 
             <p className="text-gray-600 text-lg">
               The term <strong>E-Challan</strong> is derived from two words:
-              <strong> E</strong> meaning electronic, and
-              <strong> Challan</strong> which refers to an official document
+              <strong> "E"</strong> meaning electronic, and
+              <strong> "Challan"</strong> which refers to an official document
               such as an invoice, summons, or receipt. Together, E-Challan means
               a digital ticket issued by the government for violating the law.
             </p>
@@ -118,4 +121,3 @@ const WhatEchallan = () => {
 };
 
 export default WhatEchallan;
-

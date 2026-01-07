@@ -30,19 +30,19 @@ const Header = () => {
             href="/"
             className="text-black/90 hover:text-green-700 transition"
           >
-            PSCE E-Challan
+            PSCE E-Challan{" "}
           </Link>
           <Link
             href="/"
             className="text-black/90 hover:text-green-700 transition"
           >
-            E-Challan Punjab
+            E-Challan Punjab{" "}
           </Link>
           <Link
             href="/"
             className="text-black/90 hover:text-green-700 transition"
           >
-            E-Challan Sindh
+            E-Challan Sindh{" "}
           </Link>
           <Link
             href="/#challan-form"
@@ -51,12 +51,11 @@ const Header = () => {
             Search Challan
           </Link>
         </nav>
-
         <div className="flex gap-3">
           <div className="hidden sm:block">
             <Link
               href="#"
-              className="text-white bg-blue-500 px-5 py-2 rounded-md text-base "
+              className="  text-white bg-blue-500 px-5 py-2 rounded-md text-base "
             >
               Sing in
             </Link>
@@ -76,4 +75,3 @@ const Header = () => {
 };
 
 export default Header;
-

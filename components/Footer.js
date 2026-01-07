@@ -1,13 +1,11 @@
- "use client";
+"use client";
 
 const Footer = () => {
   const handleScrollToSection = (sectionId) => {
-    if (typeof document === "undefined") return;
-
-    const targetSection = document.getElementById(sectionId);
-    if (!targetSection) return;
-
-    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -16,138 +14,103 @@ const Footer = () => {
       aria-label="Site footer"
       role="contentinfo"
     >
-      <div className="max-w-6xl mx-auto px-6 py-10 flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-        {/* Brand & description */}
-        <div className="space-y-3 max-w-md">
-          <h2 className="text-lg font-semibold tracking-tight">
-            E-Challan Awareness Portal
-          </h2>
-          <p className="text-sm leading-relaxed text-foreground/80">
-            Simplifying traffic fine management with clear, step-by-step
-            guidance to check, pay, and avoid e-challans while staying compliant
-            with traffic rules.
-          </p>
+      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
+          {/* Brand */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold">e-Challan</h3>
+            <p className="text-sm text-foreground/70">
+              Search and pay your traffic challan online. Quick, secure, and
+              convenient.
+            </p>
+          </div>
+
+          {/* Navigation */}
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
+              Navigation
+            </h4>
+            <nav aria-label="Footer navigation" className="space-y-2">
+              <button
+                type="button"
+                onClick={() => handleScrollToSection("hero")}
+                className="block text-sm text-foreground/70 hover:text-foreground transition"
+              >
+                Home
+              </button>
+              <button
+                type="button"
+                onClick={() => handleScrollToSection("check-challan")}
+                className="block text-sm text-foreground/70 hover:text-foreground transition"
+              >
+                Check Challan
+              </button>
+              <button
+                type="button"
+                onClick={() => handleScrollToSection("pay-challan")}
+                className="block text-sm text-foreground/70 hover:text-foreground transition"
+              >
+                Pay Challan
+              </button>
+            </nav>
+          </div>
+
+          {/* Learn */}
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
+              Learn
+            </h4>
+            <nav aria-label="Learn navigation" className="space-y-2">
+              <button
+                type="button"
+                onClick={() => handleScrollToSection("what-is-echallan")}
+                className="block text-sm text-foreground/70 hover:text-foreground transition"
+              >
+                What is E-Challan
+              </button>
+              <button
+                type="button"
+                onClick={() => handleScrollToSection("avoid-challan")}
+                className="block text-sm text-foreground/70 hover:text-foreground transition"
+              >
+                Avoid Challan
+              </button>
+              <button
+                type="button"
+                onClick={() => handleScrollToSection("guide-content")}
+                className="block text-sm text-foreground/70 hover:text-foreground transition"
+              >
+                Guide
+              </button>
+            </nav>
+          </div>
+
+          {/* Support */}
+          <div>
+            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider">
+              Support
+            </h4>
+            <nav aria-label="Support navigation" className="space-y-2">
+              <a
+                href="https://echallan.psca.gop.pk/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-foreground/70 hover:text-foreground transition"
+              >
+                Official Portal
+              </a>
+            </nav>
+          </div>
         </div>
 
-        {/* Quick links */}
-        <nav
-          className="grid grid-cols-1 gap-6 text-sm sm:grid-cols-2 md:grid-cols-3"
-          aria-label="Footer navigation"
-        >
-          <div className="space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-foreground/70">
-              Navigation
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleScrollToSection("hero")}
-                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
-                >
-                  Home
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleScrollToSection("check-challan")}
-                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
-                >
-                  Check E-Challan
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleScrollToSection("pay-challan")}
-                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
-                >
-                  Pay Challan Online
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          <div className="space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-foreground/70">
-              Learn
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleScrollToSection("what-is-echallan")}
-                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
-                >
-                  What is an E-Challan?
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleScrollToSection("avoid-challan")}
-                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
-                >
-                  How to Avoid Challans
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => handleScrollToSection("guide-content")}
-                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
-                >
-                  Detailed Guide
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          <div className="space-y-3">
-            <h3 className="text-xs font-semibold uppercase tracking-[0.12em] text-foreground/70">
-              Support
-            </h3>
-            <ul className="space-y-2">
-              <li>
-                <a
-                  href="#"
-                  className="text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
-                >
-                  Help &amp; FAQs
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
-                >
-                  Feedback
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
-                >
-                  Contact
-                </a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-
-      {/* Bottom bar */}
-      <div className="border-t border-foreground/10">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-3 text-xs text-foreground/70 sm:flex-row sm:items-center sm:justify-between">
-          <p className="leading-relaxed">
-            &copy; {new Date().getFullYear()} E-Challan Awareness Portal. All
-            rights reserved.
+        {/* Bottom bar */}
+        <div className="mt-8 border-t border-foreground/10 pt-8 text-center text-sm text-foreground/70">
+          <p>
+            &copy; {new Date().getFullYear()} e-Challan. All rights reserved.
           </p>
-          <p className="leading-relaxed">
-            This site is for informational and awareness purposes only and does
-            not represent any official government authority.
+          <p className="mt-2 text-xs">
+            This is an informational website. For official challan payments,
+            visit the government portal.
           </p>
         </div>
       </div>
@@ -156,4 +119,3 @@ const Footer = () => {
 };
 
 export default Footer;
-

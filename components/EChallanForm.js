@@ -28,9 +28,14 @@ const EChallanForm = () => {
       className="bg-blue-600 py-12 md:py-32 flex items-center px-4 flex-col gap-20 bg-no-repeat bg-cover"
     >
       <div className="bg-white rounded-xl shadow-lg p-8 md:max-w-6xl w-full mx-auto">
-        <h2 className="text-2xl font-semibold text-gray-800 text-center">
-          Search Challan
-        </h2>
+        <div className="text-center mb-6">
+          <h2 className="text-2xl font-semibold text-gray-800">
+            Search Challan
+          </h2>
+          <p className="text-sm text-gray-600 mt-2">
+            Enter your details below to check your e-challan status
+          </p>
+        </div>
 
         {/* Progress bar */}
         {loading && (
@@ -126,4 +131,3 @@ const EChallanForm = () => {
 };
 
 export default EChallanForm;
-

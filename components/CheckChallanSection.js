@@ -28,17 +28,21 @@ const CheckChallan = () => {
   ];
 
   return (
-    <section id="check-challan" className="px-2 lg:px-32 space-y-3 md:space-y-5">
-      <h2 className="text-2xl lg:text-3xl font-bold ">
-        How to Check E Challan Online?
-      </h2>
-
-      <p className="text-gray-700 text-lg">
-        There are three main methods to check e challan online in Pakistan.
-      </p>
+    <section id="check-challan" className="px-2 lg:px-32 space-y-3 md:space-y-5 py-12">
+      <div className="max-w-3xl space-y-3">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
+          Step 1 • Check your challan
+        </p>
+        <h2 className="text-2xl lg:text-3xl font-bold text-slate-900">
+          How to Check E Challan Online?
+        </h2>
+        <p className="text-gray-700 text-lg">
+          There are three main methods to check e challan online in Pakistan.
+        </p>
+      </div>
 
       {/* Grid Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
         {stepsData.map((item, idx) => (
           <div
             key={idx}
@@ -59,4 +63,3 @@ const CheckChallan = () => {
 };
 
 export default CheckChallan;
-
