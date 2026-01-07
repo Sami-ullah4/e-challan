@@ -1,65 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f3f3f3;
-
-  --foreground: #171717;
+  /* Force light mode colors - prevent dark mode extensions from overriding */
+  --background: #f3f3f3 !important;
+  --foreground: #171717 !important;
+  
+  /* Explicit color scheme to prevent dark mode */
+  color-scheme: light only;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: #f3f3f3;
+  --color-foreground: #171717;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Remove dark mode media query - force light mode always */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #f3f3f3;
   }
+} */
+
+html {
+  /* Force light color scheme */
+  color-scheme: light only;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: #f3f3f3 !important;
+  color: #171717 !important;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* ContentRenderer.module.css */
 .contentWrapper h1 {
   font-size: 40px;
-
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: var(--foreground);
+  color: #171717 !important;
 }
 
 .contentWrapper h2 {
   font-size: 30px;
-  color: aqua;
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: var(--foreground);
+  color: #171717 !important;
 }
 
 .contentWrapper h3 {
   font-size: 20px;
-    color: aqua;
-
   font-weight: 600;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: var(--foreground);
+  color: #171717 !important;
 }
 
 .contentWrapper p {
   font-size: 1rem;
   line-height: 1.7rem;
   margin-bottom: 1rem;
-  color: var(--foreground);
+  color: #171717 !important;
 }
 
 .contentWrapper ol,
@@ -67,7 +72,7 @@ body {
   font-size: 1.2rem;
   padding-left: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--foreground);
+  color: #171717 !important;
 }
 
 .contentWrapper ol {

@@ -3,14 +3,9 @@ import Hero from "@/components/HeroSection";
 import EChallanForm from "@/components/EChallanForm";
 import CheckChallan from "@/components/CheckChallanSection";
 import WhatEchallan from "@/components/WhatIsEChallanSection";
-import PayChallan from "@/components/PayChallanSection";
-import ContentRenderer from "@/components/ContentRenderer";
-import AvoidChallan from "@/components/AvoidChallanSection";
-import PayChallanBank from "@/components/payChallbankSection";
-import CitesEchallan from "@/components/citesEchallan";
-import HistoryChallan from "@/components/heistoryOfEchallan";
-import WhoPayChallan from "@/components/whopayChallan";
-import HowAvoidChallan from "@/components/avoidChallan";
+// import AvoidChallan from "@/components/AvoidChallanSection";
+import FeatureCardsSection from "@/components/FeatureCardsSection";
+
 export default function Home() {
   return (
     <main className="flex flex-col gap-16">
@@ -18,8 +13,7 @@ export default function Home() {
       <CheckChallan />
       <EChallanForm />
       <WhatEchallan />
-      <PayChallan />
-      {/* Image Section */}
+      {/* Feature Cards Section - Links to detailed pages */}
       <figure className="px-6 md:px-32 hidden lg:block">
         <div className="relative w-full h-87.5 rounded-xl">
           <Image
@@ -30,8 +24,9 @@ export default function Home() {
           />
         </div>
       </figure>
-      <PayChallanBank />
-      <CitesEchallan />
+      <FeatureCardsSection />
+      {/* Image Section */}
+      {/*     
       <figure className="hidden lg:block px-30 h-[340px] ">
         <Image
           src="/road-challn.webp"
@@ -41,15 +36,7 @@ export default function Home() {
           loading="lazy"
           className="rounded-xl shadow-lg w-full h-112.5 object-cover"
         />
-      </figure>
-      <HowAvoidChallan />
-      <div className=" bg-white flex flex-col gap-4">
-        <HistoryChallan />
-        <WhoPayChallan />
-      </div>
-      <ContentRenderer />
-
-      <AvoidChallan />
+      </figure> */}
     </main>
   );
 }

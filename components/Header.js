@@ -50,6 +50,12 @@ const Header = () => {
           >
             Search Challan
           </Link>
+          <Link
+            href="/about"
+            className="text-black/90 hover:text-green-700 transition"
+          >
+            About
+          </Link>
         </nav>
         <div className="flex gap-3">
           <div className="hidden sm:block">
