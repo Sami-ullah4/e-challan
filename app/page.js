@@ -4,12 +4,14 @@ import Hero from "./component/heroSection/page";
 import ContentRenderer from "./midContent/page";
 import CheckChallan from "./component/CheckE-Chalan/page";
 import AvoidChallan from "./component/avoidChallan/page";
+import WhatEchallan from "./component/whatIaEchallan/page";
 export default function Home() {
   return (
     <main className="flex flex-col gap-16">
       <Hero />
       <CheckChallan />
       <Efrom />
+      <WhatEchallan/>
       <ContentRenderer />
 
       {/* Image Section */}

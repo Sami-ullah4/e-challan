@@ -37,7 +37,7 @@ body {
 }
 
 .contentWrapper h2 {
-  font-size: 40px;
+  font-size: 30px;
   color: aqua;
   font-weight: 600;
   margin-top: 1rem;
@@ -56,7 +56,7 @@ body {
 }
 
 .contentWrapper p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.7rem;
   margin-bottom: 1rem;
   color: var(--foreground);
