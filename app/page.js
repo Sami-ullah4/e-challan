@@ -5,6 +5,7 @@ import ContentRenderer from "./midContent/page";
 import CheckChallan from "./component/CheckE-Chalan/page";
 import AvoidChallan from "./component/avoidChallan/page";
 import WhatEchallan from "./component/whatIaEchallan/page";
+import PayChallan from "./component/payChallan/page";
 export default function Home() {
   return (
     <main className="flex flex-col gap-16">
@@ -12,6 +13,7 @@ export default function Home() {
       <CheckChallan />
       <Efrom />
       <WhatEchallan/>
+      <PayChallan/>
       <ContentRenderer />
 
       {/* Image Section */}
