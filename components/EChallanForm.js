@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function Efrom() {
+const EChallanForm = () => {
   const [cnic, setCnic] = useState("");
   const [challan, setChallan] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -23,9 +23,8 @@ export default function Efrom() {
 
   return (
     <section
-          style={{ backgroundImage: "url('/heroBackgound.png')" }}
-
       id="challan-form"
+      style={{ backgroundImage: "url('/heroBackgound.png')" }}
       className="bg-blue-600 py-12 md:py-32 flex items-center px-4 flex-col gap-20 bg-no-repeat bg-cover"
     >
       <div className="bg-white rounded-xl shadow-lg p-8 md:max-w-6xl w-full mx-auto">
@@ -124,4 +123,7 @@ export default function Efrom() {
       `}</style>
     </section>
   );
-}
+};
+
+export default EChallanForm;
+

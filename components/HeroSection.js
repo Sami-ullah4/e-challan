@@ -1,6 +1,6 @@
 "use client";
 
-export default function Hero() {
+const Hero = () => {
   const scrollToForm = () => {
     document
       .getElementById("challan-form")
@@ -9,8 +9,8 @@ export default function Hero() {
 
   return (
     <section
-      className="px-2 lg:px-32 py-10 lg:py-20 flex flex-col gap-6 
-                  bg-cover bg-center"
+      id="hero"
+      className="px-2 lg:px-32 py-10 lg:py-20 flex flex-col gap-6 bg-cover bg-center"
       style={{ backgroundImage: "url('/heroBackgound.png')" }}
     >
       <h1 className="text-3xl md:text-5xl font-bold text-white max-w-4xl ">
@@ -33,4 +33,7 @@ export default function Hero() {
       </button>
     </section>
   );
-}
+};
+
+export default Hero;
+

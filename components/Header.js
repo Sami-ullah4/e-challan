@@ -1,9 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Header() {
+const Header = () => {
   return (
-    <header className=" fixed py-1 w-full shadow bg-white z-50">
+    <header className="fixed py-1 w-full shadow bg-white z-50">
       <nav className="px-3 lg:px-30 flex items-center justify-between">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 text-black ">
@@ -20,7 +20,7 @@ export default function Header() {
 
           <div className="leading-tight">
             <div className="font-semibold text-lg">e-Challan</div>
-            <div className="text-xs text-black/70">Search & Pay</div>
+            <div className="text-xs text-black/70">Search &amp; Pay</div>
           </div>
         </Link>
 
@@ -30,32 +30,33 @@ export default function Header() {
             href="/"
             className="text-black/90 hover:text-green-700 transition"
           >
-            PSCE E-Challan{" "}
+            PSCE E-Challan
           </Link>
           <Link
             href="/"
             className="text-black/90 hover:text-green-700 transition"
           >
-            E-Challan Punjab{" "}
+            E-Challan Punjab
           </Link>
           <Link
             href="/"
             className="text-black/90 hover:text-green-700 transition"
           >
-            E-Challan Sindh{" "}
+            E-Challan Sindh
           </Link>
           <Link
-            href="/e-challan-forn"
+            href="/#challan-form"
             className="text-black hover:text-green-700 transition"
           >
             Search Challan
           </Link>
         </nav>
+
         <div className="flex gap-3">
           <div className="hidden sm:block">
             <Link
               href="#"
-              className="  text-white bg-blue-500 px-5 py-2 rounded-md text-base "
+              className="text-white bg-blue-500 px-5 py-2 rounded-md text-base "
             >
               Sing in
             </Link>
@@ -72,4 +73,7 @@ export default function Header() {
       </nav>
     </header>
   );
-}
+};
+
+export default Header;
+

@@ -1,5 +1,15 @@
+ "use client";
 
 const Footer = () => {
+  const handleScrollToSection = (sectionId) => {
+    if (typeof document === "undefined") return;
+
+    const targetSection = document.getElementById(sectionId);
+    if (!targetSection) return;
+
+    targetSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <footer
       className="bg-background text-foreground border-t border-foreground/10 mt-16"
@@ -30,28 +40,31 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="/"
-                  className="text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
+                <button
+                  type="button"
+                  onClick={() => handleScrollToSection("hero")}
+                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
                 >
                   Home
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="/component/CheckE-Chalan"
-                  className="text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
+                <button
+                  type="button"
+                  onClick={() => handleScrollToSection("check-challan")}
+                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
                 >
                   Check E-Challan
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="/component/payChallan"
-                  className="text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
+                <button
+                  type="button"
+                  onClick={() => handleScrollToSection("pay-challan")}
+                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
                 >
                   Pay Challan Online
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -62,28 +75,31 @@ const Footer = () => {
             </h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="/component/whatIaEchallan"
-                  className="text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
+                <button
+                  type="button"
+                  onClick={() => handleScrollToSection("what-is-echallan")}
+                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
                 >
                   What is an E-Challan?
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="/component/avoidChallan"
-                  className="text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
+                <button
+                  type="button"
+                  onClick={() => handleScrollToSection("avoid-challan")}
+                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
                 >
                   How to Avoid Challans
-                </a>
+                </button>
               </li>
               <li>
-                <a
-                  href="/midContent"
-                  className="text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
+                <button
+                  type="button"
+                  onClick={() => handleScrollToSection("guide-content")}
+                  className="text-left text-foreground/90 hover:text-foreground underline-offset-4 hover:underline transition-colors"
                 >
                   Detailed Guide
-                </a>
+                </button>
               </li>
             </ul>
           </div>
@@ -140,3 +156,4 @@ const Footer = () => {
 };
 
 export default Footer;
+

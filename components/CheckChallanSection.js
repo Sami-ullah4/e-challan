@@ -1,4 +1,4 @@
-export default function CheckChallan() {
+const CheckChallan = () => {
   const stepsData = [
     {
       title: "Check E Challan Using CNIC",
@@ -28,7 +28,7 @@ export default function CheckChallan() {
   ];
 
   return (
-    <section className="px-2 lg:px-32 space-y-3 md:space-y-5">
+    <section id="check-challan" className="px-2 lg:px-32 space-y-3 md:space-y-5">
       <h2 className="text-2xl lg:text-3xl font-bold ">
         How to Check E Challan Online?
       </h2>
@@ -56,4 +56,7 @@ export default function CheckChallan() {
       </div>
     </section>
   );
-}
+};
+
+export default CheckChallan;
+

@@ -5,10 +5,10 @@ import { BiCctv } from "react-icons/bi";
 import { FiDatabase } from "react-icons/fi";
 import { MdOutlinePayments } from "react-icons/md";
 
-export default function WhatEchallan() {
+const WhatEchallan = () => {
   return (
     <>
-      <section className="px-2 lg:px-30 pt-8">
+      <section id="what-is-echallan" className="px-2 lg:px-30 pt-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8  items-center">
           {/* Image Section */}
           <figure className="relative w-full h-56 md:h-96 rounded-xl overflow-hidden shadow-md">
@@ -29,8 +29,8 @@ export default function WhatEchallan() {
 
             <p className="text-gray-600 text-lg">
               The term <strong>E-Challan</strong> is derived from two words:
-              <strong> "E"</strong> meaning electronic, and
-              <strong> "Challan"</strong> which refers to an official document
+              <strong> E</strong> meaning electronic, and
+              <strong> Challan</strong> which refers to an official document
               such as an invoice, summons, or receipt. Together, E-Challan means
               a digital ticket issued by the government for violating the law.
             </p>
@@ -40,7 +40,7 @@ export default function WhatEchallan() {
               introduced to penalize traffic rule violators. It is an automated
               digital ticketing system that records violations using
               surveillance cameras and monitoring technologies. The challan is
-              linked to the offender's CNIC, ensuring transparency, efficiency,
+              linked to the offender&apos;s CNIC, ensuring transparency, efficiency,
               and accountability.
             </p>
           </div>
@@ -84,9 +84,9 @@ export default function WhatEchallan() {
             </div>
             <h3 className="text-xl font-semibold">Database Finds</h3>
             <p className="text-gray-600 text-lg">
-              The cameras click a picture of the vehicle's license plate and
+              The cameras click a picture of the vehicle&apos;s license plate and
               send it to the database. The database then analyses and connects
-              the license plate with the vehicle owner's CNIC
+              the license plate with the vehicle owner&apos;s CNIC
             </p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg ">
@@ -115,4 +115,7 @@ export default function WhatEchallan() {
       </section>
     </>
   );
-}
+};
+
+export default WhatEchallan;
+
