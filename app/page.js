@@ -2,17 +2,17 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import Hero from "@/components/HeroSection";
 import CheckChallan from "@/components/CheckChallanSection";
-// import EChallanForm from "@/components/EChallanForm";
-// import WhatEchallan from "@/components/WhatIsEChallanSection";
-// import AvoidChallan from "@/components/AvoidChallanSection";
-// import FeatureCardsSection from "@/components/FeatureCardsSection";
-const EChallanForm = dynamic(() => import("../components/EChallanForm"));
-const WhatEchallan = dynamic(() =>
-  import("../components/WhatIsEChallanSection")
-);
-const FeatureCardsSection = dynamic(() =>
-  import("../components/FeatureCardsSection")
-);
+import EChallanForm from "@/components/EChallanForm";
+import WhatEchallan from "@/components/WhatIsEChallanSection";
+import AvoidChallan from "@/components/AvoidChallanSection";
+import FeatureCardsSection from "@/components/FeatureCardsSection";
+// const EChallanForm = dynamic(() => import("../components/EChallanForm"));
+// const WhatEchallan = dynamic(() =>
+//   import("../components/WhatIsEChallanSection")
+// );
+// const FeatureCardsSection = dynamic(() =>
+//   import("../components/FeatureCardsSection")
+// );
 export default function Home() {
   return (
     <main className="flex flex-col gap-16">
