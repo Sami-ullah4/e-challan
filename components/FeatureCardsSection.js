@@ -150,23 +150,21 @@ const FeatureCardsSection = () => {
 
   return (
     <section className="bg-gradient-to-b from-white via-slate-50 to-white py-14 sm:py-20">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+      <div className=" px-3  lg:px-32">
         {/* Section Heading */}
         <div className="mb-12 space-y-4 text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-            Explore guides
-          </p>
+         
           <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl md:text-4xl">
             Comprehensive E-Challan Guides
           </h2>
-          <p className="mx-auto max-w-3xl text-sm leading-relaxed text-slate-700 sm:text-base">
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-slate-700 sm:text-base">
             Access detailed guides and information about E-Challan payments,
             avoiding violations, and understanding the system across Pakistan.
           </p>
         </div>
 
         {/* Feature Cards Grid */}
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             const colors = colorClasses[feature.color];
@@ -187,7 +185,7 @@ const FeatureCardsSection = () => {
                     >
                       <Icon size={24} />
                     </div>
-                    <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-medium text-slate-700">
+                    <span className="rounded-full bg-slate-100 px-3 py-1 text-sm font-medium text-slate-700">
                       {feature.badge}
                     </span>
                   </div>

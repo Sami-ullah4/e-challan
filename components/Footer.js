@@ -106,6 +106,18 @@ const Footer = () => {
               >
                 About
               </Link>
+              <Link
+                href="/privacy-policy"
+                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/disclaimer"
+                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
+              >
+                Disclaimer
+              </Link>
               <a
                 href="https://echallan.psca.gop.pk/"
                 target="_blank"

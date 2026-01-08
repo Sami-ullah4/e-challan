@@ -1,15 +1,19 @@
 import "./globals.css";
 import Header from "@/components/Header";
-import Footer from "@/components/Footer";
-
+import dynamic from "next/dynamic";
+// import Footer from "@/components/Footer";
+const Footer = dynamic(() => import("../components/Footer"));
 export const metadata = {
   title: "E-Challan Pakistan - Check & Pay Traffic Challan Online",
-  description: "Check and pay your E-Challan online in Pakistan. Complete guide on how to check challan using CNIC, vehicle number, or SMS. Pay via JazzCash, Easypaisa, or bank accounts.",
-  keywords: "e-challan, echallan, traffic challan, challan check, pay challan online, pakistan challan, psca challan",
+  description:
+    "Check and pay your E-Challan online in Pakistan. Complete guide on how to check challan using CNIC, vehicle number, or SMS. Pay via JazzCash, Easypaisa, or bank accounts.",
+  keywords:
+    "e-challan, echallan, traffic challan, challan check, pay challan online, pakistan challan, psca challan",
   authors: [{ name: "E-Challan Pakistan" }],
   openGraph: {
     title: "E-Challan Pakistan - Check & Pay Traffic Challan Online",
-    description: "Check and pay your E-Challan online in Pakistan. Complete guide on checking and paying traffic challans.",
+    description:
+      "Check and pay your E-Challan online in Pakistan. Complete guide on checking and paying traffic challans.",
     type: "website",
     locale: "en_US",
   },

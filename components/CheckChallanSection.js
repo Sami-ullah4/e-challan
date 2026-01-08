@@ -28,11 +28,9 @@ const CheckChallan = () => {
   ];
 
   return (
-    <section id="check-challan" className="px-2 lg:px-32 space-y-3 md:space-y-5 py-12">
+    <section id="check-challan" className="px-2 lg:px-32 space-y-3 md:space-y-5 py-4">
       <div className="max-w-3xl space-y-3">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-          Step 1 • Check your challan
-        </p>
+       
         <h2 className="text-2xl lg:text-3xl font-bold text-slate-900">
           How to Check E Challan Online?
         </h2>

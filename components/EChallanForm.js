@@ -29,10 +29,10 @@ const EChallanForm = () => {
     >
       <div className="bg-white rounded-xl shadow-lg p-8 md:max-w-6xl w-full mx-auto">
         <div className="text-center mb-6">
-          <h2 className="text-2xl font-semibold text-gray-800">
+          <h2 className="text-3xl font-semibold text-gray-800">
             Search Challan
           </h2>
-          <p className="text-sm text-gray-600 mt-2">
+          <p className="text-lg text-gray-600 mt-2">
             Enter your details below to check your e-challan status
           </p>
         </div>
@@ -48,7 +48,7 @@ const EChallanForm = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* CNIC */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-base font-medium text-gray-700 mb-1">
                 CNIC Number or Chassis Number
                 <span className="text-red-500">*</span>
               </label>
@@ -70,9 +70,9 @@ const EChallanForm = () => {
 
             {/* Challan */}
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-1">
+              <label className="block text-base font-medium text-gray-700 mb-1">
                 Challan Number <span className="text-red-500">*</span>
-                <span className="text-gray-500 text-xs">
+                <span className="text-gray-500 text-sm">
                   {" "}
                   (ABC 000, ABC 0000, ABC-00-0000)
                 </span>

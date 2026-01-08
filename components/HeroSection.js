@@ -10,7 +10,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative px-2 lg:px-32 py-20 lg:py-32 flex flex-col gap-6 bg-cover bg-center bg-no-repeat"
+      className="relative px-2 lg:px-32 py-20 lg:py-28 flex flex-col gap-6 bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: "url('/heroBackgound.png')" }}
     >
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-slate-900/40"></div>

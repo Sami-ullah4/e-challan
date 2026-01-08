@@ -1,0 +1,103 @@
+# robots.txt for e-Challan Pakistan
+# This website allows indexing of all public pages and images
+
+# Allow all search engines to crawl all pages and images
+User-agent: *
+Allow: /
+
+# Allow images from public directory
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+Allow: /*.ico$
+
+# Disallow Next.js internal files and directories
+Disallow: /api/
+Disallow: /_next/
+Disallow: /_next/static/
+Disallow: /_next/image
+Disallow: /_next/webpack-hmr
+
+# Disallow app directory internal files (not routes)
+Disallow: /*/page.js
+Disallow: /*/layout.js
+Disallow: /*/loading.js
+Disallow: /*/error.js
+Disallow: /*/not-found.js
+Disallow: /*/template.js
+
+# Disallow component files and internal source directories
+Disallow: /components/
+Disallow: /lib/
+Disallow: /node_modules/
+Disallow: /src/
+
+# Disallow configuration and hidden files
+Disallow: /.git/
+Disallow: /.next/
+Disallow: /.env
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tsconfig.json
+Disallow: /next.config.js
+
+# Disallow executable and unnecessary files
+Disallow: /*.exe$
+Disallow: /*.dmg$
+Disallow: /*.pkg$
+
+# Allow PDFs if you have any
+Allow: /*.pdf$
+
+# Specific rules for Google (most important for SEO)
+User-agent: Googlebot
+Allow: /
+
+# Allow images for Google Image Search
+User-agent: Googlebot-Image
+Allow: /
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+# Other major search engines
+User-agent: Bingbot
+Allow: /
+
+User-agent: BingPreview
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Social media crawlers (for link previews)
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://e-challan-pi.vercel.app/sitemap.xml
+# Alternative: Sitemap: https://e-challan.pk/sitemap.xml

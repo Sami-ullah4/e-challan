@@ -23,9 +23,6 @@ const WhatEchallan = () => {
 
           {/* Content Section */}
           <div className="space-y-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-              Overview
-            </p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
               What is E-Challan in Pakistan?
             </h2>
@@ -38,18 +35,18 @@ const WhatEchallan = () => {
               a digital ticket issued by the government for violating the law.
             </p>
 
-            <p className="text-gray-600 leading-relaxed">
+            <p className="text-gray-600 leading-relaxed text-lg">
               In Pakistan, the E-Challan system is a modern initiative
               introduced to penalize traffic rule violators. It is an automated
               digital ticketing system that records violations using
               surveillance cameras and monitoring technologies. The challan is
-              linked to the offender&apos;s CNIC, ensuring transparency, efficiency,
-              and accountability.
+              linked to the offender&apos;s CNIC, ensuring transparency,
+              efficiency, and accountability.
             </p>
           </div>
         </div>
       </section>
-      <section className="px-4 py-10 bg-white">
+      <section className="px-4 py-16 bg-white">
         <div className="max-w-2xl mx-auto text-center space-y-4">
           <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
             How Does E-Challan Work?
@@ -87,9 +84,9 @@ const WhatEchallan = () => {
             </div>
             <h3 className="text-xl font-semibold">Database Finds</h3>
             <p className="text-gray-600 text-lg">
-              The cameras click a picture of the vehicle&apos;s license plate and
-              send it to the database. The database then analyses and connects
-              the license plate with the vehicle owner&apos;s CNIC
+              The cameras click a picture of the vehicle&apos;s license plate
+              and send it to the database. The database then analyses and
+              connects the license plate with the vehicle owner&apos;s CNIC
             </p>
           </div>
           <div className="bg-gray-100 p-4 rounded-lg ">

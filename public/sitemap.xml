@@ -1,0 +1,142 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
+        http://www.google.com/schemas/sitemap-image/1.1
+        http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+  
+  <!-- Home Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://e-challan-pi.vercel.app/logo.webp</image:loc>
+      <image:title>e-Challan Pakistan Logo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://e-challan-pi.vercel.app/chalan-image.png</image:loc>
+      <image:title>E-Challan Awareness Illustration</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://e-challan-pi.vercel.app/road-challn.webp</image:loc>
+      <image:title>Road Challan Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://e-challan-pi.vercel.app/heroBackgound.png</image:loc>
+      <image:title>Hero Background Image</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://e-challan-pi.vercel.app/echallanM.jpg</image:loc>
+      <image:title>E-Challan Mobile Image</image:title>
+    </image:image>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/about</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Privacy Policy Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/privacy-policy</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Disclaimer Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/disclaimer</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Pay Challan Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/pay-challan</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Pay Challan Bank Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/pay-challan-bank</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- How to Avoid Challan Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/how-avoid-challan</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Cities E-Challan Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/cities-echallan</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- History E-Challan Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/history-echallan</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Who Pay Challan Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/who-pay-challan</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- What If Avoid Challan Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/what-if-avoid-challan</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- What If Get Wrong Challan Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/what-if-get-wrong-challan</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Tips E-Challan Verification Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/tips-echallan-varification</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Issue Online Payment Page -->
+  <url>
+    <loc>https://e-challan-pi.vercel.app/issu-online-payment</loc>
+    <lastmod>2024-12-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+</urlset> -->

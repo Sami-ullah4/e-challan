@@ -1,11 +1,18 @@
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Hero from "@/components/HeroSection";
-import EChallanForm from "@/components/EChallanForm";
 import CheckChallan from "@/components/CheckChallanSection";
-import WhatEchallan from "@/components/WhatIsEChallanSection";
+// import EChallanForm from "@/components/EChallanForm";
+// import WhatEchallan from "@/components/WhatIsEChallanSection";
 // import AvoidChallan from "@/components/AvoidChallanSection";
-import FeatureCardsSection from "@/components/FeatureCardsSection";
-
+// import FeatureCardsSection from "@/components/FeatureCardsSection";
+const EChallanForm = dynamic(() => import("../components/EChallanForm"));
+const WhatEchallan = dynamic(() =>
+  import("../components/WhatIsEChallanSection")
+);
+const FeatureCardsSection = dynamic(() =>
+  import("../components/FeatureCardsSection")
+);
 export default function Home() {
   return (
     <main className="flex flex-col gap-16">
@@ -20,6 +27,7 @@ export default function Home() {
             src="/chalan-image.png"
             alt="E-Challan Awareness Illustration"
             fill
+            loading="lazy"
             className="object-contain"
           />
         </div>
