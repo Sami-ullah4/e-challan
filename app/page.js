@@ -5,6 +5,7 @@ import { Suspense } from "react";
 // Critical above-the-fold components - load immediately
 import Hero from "@/components/HeroSection";
 import CheckChallan from "@/components/CheckChallanSection";
+import LastSection from "@/components/LastSection";
 
 // Below-the-fold components - lazy load with loading states
 const EChallanForm = dynamic(() => import("../components/EChallanForm"), {
@@ -38,7 +39,9 @@ const WhatEchallan = dynamic(
   }
 );
 
-const FeatureCardsSection = dynamic(() => import("../components/FeatureCardsSection"));
+const FeatureCardsSection = dynamic(() =>
+  import("../components/FeatureCardsSection")
+);
 export default function Home() {
   return (
     <main className="flex flex-col gap-16">
@@ -67,18 +70,7 @@ export default function Home() {
       <Suspense fallback={null}>
         <FeatureCardsSection />
       </Suspense>
-      {/* Image Section */}
-      {/*     
-      <figure className="hidden lg:block px-30 h-[340px] ">
-        <Image
-          src="/road-challn.webp"
-          alt="E-Challan Awareness Illustration"
-          width={1200}
-          height={420}
-          loading="lazy"
-          className="rounded-xl shadow-lg w-full h-112.5 object-cover"
-        />
-      </figure> */}
+      <LastSection />
     </main>
   );
 }

@@ -12,7 +12,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="bg-[#f3f3f3] text-[#171717] border-t border-[#171717]/10 mt-16"
+      className="bg-[#102247] text-gray-100 border-t  mt-16"
       aria-label="Site footer"
       role="contentinfo"
       style={{ colorScheme: "light only" }}
@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="space-y-4">
             <h3 className="text-lg font-semibold">e-Challan</h3>
-            <p className="text-sm text-[#171717]/70">
+            <p className="text-sm ">
               Search and pay your traffic challan online. Quick, secure, and
               convenient.
             </p>
@@ -37,21 +37,21 @@ const Footer = () => {
               <button
                 type="button"
                 onClick={() => handleScrollToSection("hero")}
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
+                className="block text-sm  "
               >
                 Home
               </button>
               <button
                 type="button"
                 onClick={() => handleScrollToSection("check-challan")}
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
+                className="block text-sm  "
               >
                 Check Challan
               </button>
               <button
                 type="button"
                 onClick={() => handleScrollToSection("pay-challan")}
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
+                className="block text-sm  "
               >
                 Pay Challan
               </button>
@@ -67,21 +67,21 @@ const Footer = () => {
               <button
                 type="button"
                 onClick={() => handleScrollToSection("what-is-echallan")}
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
+                className="block text-sm  "
               >
                 What is E-Challan
               </button>
               <button
                 type="button"
                 onClick={() => handleScrollToSection("avoid-challan")}
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
+                className="block text-sm  "
               >
                 Avoid Challan
               </button>
               <button
                 type="button"
                 onClick={() => handleScrollToSection("guide-content")}
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
+                className="block text-sm  "
               >
                 Guide
               </button>
@@ -94,35 +94,23 @@ const Footer = () => {
               Support
             </h4>
             <nav aria-label="Support navigation" className="space-y-2">
-              <Link
-                href="/content"
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
-              >
+              <Link href="/content" className="block text-sm  ">
                 Content Library
               </Link>
-              <Link
-                href="/about"
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
-              >
+              <Link href="/about" className="block text-sm  ">
                 About
               </Link>
-              <Link
-                href="/privacy-policy"
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
-              >
+              <Link href="/privacy-policy" className="block text-sm  ">
                 Privacy Policy
               </Link>
-              <Link
-                href="/disclaimer"
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
-              >
+              <Link href="/disclaimer" className="block text-sm  ">
                 Disclaimer
               </Link>
               <a
                 href="https://echallan.psca.gop.pk/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block text-sm text-[#171717]/70 hover:text-[#171717] transition"
+                className="block text-sm  "
               >
                 Official Portal
               </a>
@@ -131,7 +119,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom bar */}
-        <div className="mt-8 border-t border-[#171717]/10 pt-8 text-center text-sm text-[#171717]/70">
+        <div className="mt-8 border-t border-[#171717]/10 pt-8 text-center text-sm ">
           <p>
             &copy; {new Date().getFullYear()} e-Challan. All rights reserved.
           </p>

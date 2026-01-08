@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback } from "react";
+import Image from "next/image";
 
 const Hero = () => {
   const scrollToForm = useCallback(() => {
@@ -13,15 +14,22 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative px-2 lg:px-32 py-20 lg:py-28 flex flex-col gap-6 bg-cover bg-center bg-no-repeat"
-      style={{ 
-        backgroundImage: "url('/heroBackgound.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      className="relative px-2 lg:px-32 py-20 lg:py-28 overflow-hidden"
     >
+      <Image
+        src="/heroBackgound.png"
+        alt="Check E Challan Online Pakistan"
+        fill
+        priority
+        fetchPriority="high"
+        sizes="100vw"
+        className="object-cover"
+      />
+
+      {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-slate-900/40"></div>
+
+      {/* Content */}
       <div className="relative z-10 max-w-4xl space-y-6">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
           Check your challan online

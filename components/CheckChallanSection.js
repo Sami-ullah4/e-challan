@@ -1,9 +1,5 @@
-"use client";
-
-import { useMemo } from "react";
-
 const CheckChallan = () => {
-  const stepsData = useMemo(() => [
+  const stepsData = [
     {
       title: "Check E Challan Using CNIC",
       steps: [
@@ -29,12 +25,14 @@ const CheckChallan = () => {
         "You will receive an SMS with all your e challan details.",
       ],
     },
-  ], []);
+  ];
 
   return (
-    <section id="check-challan" className="px-2 lg:px-32 space-y-3 md:space-y-5 py-4">
+    <section
+      id="check-challan"
+      className="px-2 lg:px-32 space-y-3 md:space-y-5 py-4"
+    >
       <div className="max-w-3xl space-y-3">
-       
         <h2 className="text-2xl lg:text-3xl font-bold text-slate-900">
           How to Check E Challan Online?
         </h2>

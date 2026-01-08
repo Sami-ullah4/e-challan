@@ -6,8 +6,8 @@ const Header = () => {
     <header className="fixed py-1 w-full shadow bg-white z-50">
       <nav className="px-3 lg:px-30 flex items-center justify-between">
         {/* Logo */}
-        <Link 
-          href="/" 
+        <Link
+          href="/"
           className="flex items-center gap-3 text-black"
           prefetch={true}
           aria-label="E-Challan Home"
@@ -32,7 +32,10 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden sm:flex items-center gap-8 text-lg font-semibold" aria-label="Main navigation">
+        <nav
+          className="hidden sm:flex items-center gap-8 text-lg font-semibold"
+          aria-label="Main navigation"
+        >
           <Link
             href="/"
             className="text-black/90 hover:text-green-700 transition-colors"
@@ -60,13 +63,6 @@ const Header = () => {
             prefetch={false}
           >
             Search Challan
-          </Link>
-          <Link
-            href="/about"
-            className="text-black/90 hover:text-green-700 transition-colors"
-            prefetch={true}
-          >
-            About
           </Link>
         </nav>
         <div className="flex gap-3">
