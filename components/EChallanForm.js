@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback, useMemo } from "react";
 
 const EChallanForm = () => {
   const [cnic, setCnic] = useState("");
@@ -8,7 +8,7 @@ const EChallanForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = useCallback((e) => {
     e.preventDefault();
     setSubmitted(true);
 
@@ -16,10 +16,29 @@ const EChallanForm = () => {
 
     setLoading(true);
 
-    setTimeout(() => {
+    // Use requestIdleCallback for better performance if available
+    const redirect = () => {
       window.location.href = "https://echallan.psca.gop.pk/?vehicle=";
-    }, 2000);
-  };
+    };
+
+    if (window.requestIdleCallback) {
+      requestIdleCallback(redirect, { timeout: 2000 });
+    } else {
+      setTimeout(redirect, 2000);
+    }
+  }, [cnic, challan]);
+
+  const handleCnicChange = useCallback((e) => {
+    setCnic(e.target.value);
+  }, []);
+
+  const handleChallanChange = useCallback((e) => {
+    setChallan(e.target.value);
+  }, []);
+
+  const isFormValid = useMemo(() => {
+    return cnic.trim() !== "" && challan.trim() !== "";
+  }, [cnic, challan]);
 
   return (
     <section
@@ -55,9 +74,11 @@ const EChallanForm = () => {
               <input
                 type="text"
                 value={cnic}
-                onChange={(e) => setCnic(e.target.value)}
+                onChange={handleCnicChange}
                 disabled={loading}
                 placeholder="12345-1234567-1"
+                autoComplete="off"
+                aria-required="true"
                 className={`w-full rounded-md px-4 py-3 border
                   focus:outline-none focus:ring-2
                   ${
@@ -98,13 +119,14 @@ const EChallanForm = () => {
           <div className="text-center pt-4">
             <button
               type="submit"
-              disabled={loading}
-              className={`px-8 py-3 rounded-md font-medium transition
+              disabled={loading || !isFormValid}
+              className={`px-8 py-3 rounded-md font-medium transition-colors
                 ${
-                  loading
+                  loading || !isFormValid
                     ? "bg-blue-400 cursor-not-allowed text-white"
-                    : "bg-blue-600 hover:bg-blue-700 text-white"
+                    : "bg-blue-600 hover:bg-blue-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 }`}
+              aria-label="Search for challan"
             >
               {loading ? "Searching..." : "Search Challan"}
             </button>

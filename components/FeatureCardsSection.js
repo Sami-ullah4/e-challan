@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useMemo } from "react";
 import {
   RiBankLine,
   RiMoneyDollarCircleLine,
@@ -10,7 +13,7 @@ import {
 } from "react-icons/ri";
 
 const FeatureCardsSection = () => {
-  const features = [
+  const features = useMemo(() => [
     {
       title: "How to Avoid Getting E-Challan",
       description:
@@ -101,9 +104,9 @@ const FeatureCardsSection = () => {
       color: "orange",
       badge: "Consequences",
     },
-  ];
+  ], []);
 
-  const colorClasses = {
+  const colorClasses = useMemo(() => ({
     red: {
       iconBg: "bg-red-50",
       iconText: "text-red-600",
@@ -146,7 +149,7 @@ const FeatureCardsSection = () => {
       accent: "border-orange-200",
       hover: "hover:border-orange-300",
     },
-  };
+  }), []);
 
   return (
     <section className="bg-gradient-to-b from-white via-slate-50 to-white py-14 sm:py-20">
@@ -174,6 +177,8 @@ const FeatureCardsSection = () => {
                 key={index}
                 href={feature.href}
                 className="group block transition-transform hover:-translate-y-1"
+                prefetch={false}
+                aria-label={`Read more about ${feature.title}`}
               >
                 <div
                   className={`h-full rounded-2xl border-2 ${colors.accent} ${colors.hover} bg-white/90 p-6 shadow-sm shadow-slate-200 transition-all hover:shadow-md`}

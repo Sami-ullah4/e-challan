@@ -18,6 +18,8 @@ const WhatEchallan = () => {
               fill
               className="object-cover object-top"
               loading="lazy"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              quality={85}
             />
           </figure>
 

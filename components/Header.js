@@ -6,7 +6,12 @@ const Header = () => {
     <header className="fixed py-1 w-full shadow bg-white z-50">
       <nav className="px-3 lg:px-30 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-3 text-black ">
+        <Link 
+          href="/" 
+          className="flex items-center gap-3 text-black"
+          prefetch={true}
+          aria-label="E-Challan Home"
+        >
           <figure className="relative w-10.5 h-10.5 bg-pink-800">
             <Image
               src="/logo.webp"
@@ -15,6 +20,8 @@ const Header = () => {
               height={42}
               className="object-contain"
               priority
+              fetchPriority="high"
+              sizes="42px"
             />
           </figure>
 
@@ -25,34 +32,39 @@ const Header = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden sm:flex items-center gap-8 text-lg font-semibold ">
+        <nav className="hidden sm:flex items-center gap-8 text-lg font-semibold" aria-label="Main navigation">
           <Link
             href="/"
-            className="text-black/90 hover:text-green-700 transition"
+            className="text-black/90 hover:text-green-700 transition-colors"
+            prefetch={false}
           >
             PSCE E-Challan{" "}
           </Link>
           <Link
             href="/"
-            className="text-black/90 hover:text-green-700 transition"
+            className="text-black/90 hover:text-green-700 transition-colors"
+            prefetch={false}
           >
             E-Challan Punjab{" "}
           </Link>
           <Link
             href="/"
-            className="text-black/90 hover:text-green-700 transition"
+            className="text-black/90 hover:text-green-700 transition-colors"
+            prefetch={false}
           >
             E-Challan Sindh{" "}
           </Link>
           <Link
             href="/#challan-form"
-            className="text-black hover:text-green-700 transition"
+            className="text-black hover:text-green-700 transition-colors"
+            prefetch={false}
           >
             Search Challan
           </Link>
           <Link
             href="/about"
-            className="text-black/90 hover:text-green-700 transition"
+            className="text-black/90 hover:text-green-700 transition-colors"
+            prefetch={true}
           >
             About
           </Link>
