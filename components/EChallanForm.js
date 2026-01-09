@@ -8,6 +8,9 @@ const EChallanForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
+  // Increased animation duration to 4 seconds
+  const ANIMATION_DURATION = 4000; // 4 seconds in milliseconds
+
   const handleSubmit = useCallback((e) => {
     e.preventDefault();
     setSubmitted(true);
@@ -16,24 +19,17 @@ const EChallanForm = () => {
 
     setLoading(true);
 
-    // Use requestIdleCallback for better performance if available
+    // Redirect only after animation completes
     const redirect = () => {
       window.location.href = "https://echallan.psca.gop.pk/?vehicle=";
     };
 
-    if (window.requestIdleCallback) {
-      requestIdleCallback(redirect, { timeout: 2000 });
-    } else {
-      setTimeout(redirect, 2000);
-    }
+    // Use setTimeout with the same duration as animation
+    setTimeout(redirect, ANIMATION_DURATION);
   }, [cnic, challan]);
 
   const handleCnicChange = useCallback((e) => {
     setCnic(e.target.value);
-  }, []);
-
-  const handleChallanChange = useCallback((e) => {
-    setChallan(e.target.value);
   }, []);
 
   const isFormValid = useMemo(() => {
@@ -44,7 +40,7 @@ const EChallanForm = () => {
     <section
       id="challan-form"
       style={{ backgroundImage: "url('/heroBackgound.png')" }}
-      className="bg-blue-600 py-12 md:py-32 flex items-center px-4 flex-col gap-20 bg-no-repeat bg-cover"
+      className="bg-blue-600 py-12 md:py-20 flex items-center px-4 flex-col gap-20 bg-no-repeat bg-cover"
     >
       <div className="bg-white rounded-xl shadow-lg p-8 md:max-w-6xl w-full mx-auto">
         <div className="text-center mb-6">
@@ -58,7 +54,7 @@ const EChallanForm = () => {
 
         {/* Progress bar */}
         {loading && (
-          <div className="w-full h-1 bg-blue-100 rounded-full mt-4 overflow-hidden">
+          <div className="w-full h-2 bg-blue-100 rounded-full mt-4 overflow-hidden">
             <div className="h-full bg-blue-600 animate-progress"></div>
           </div>
         )}
@@ -145,7 +141,7 @@ const EChallanForm = () => {
           }
         }
         .animate-progress {
-          animation: progress 2s linear forwards;
+          animation: progress 4s linear forwards;
         }
       `}</style>
     </section>

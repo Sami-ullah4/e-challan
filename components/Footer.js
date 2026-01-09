@@ -94,9 +94,7 @@ const Footer = () => {
               Support
             </h4>
             <nav aria-label="Support navigation" className="space-y-2">
-              <Link href="/content" className="block text-sm  ">
-                Content Library
-              </Link>
+             
               <Link href="/about" className="block text-sm  ">
                 About
               </Link>

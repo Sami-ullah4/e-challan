@@ -1,5 +1,16 @@
 import Link from "next/link";
-import { RiErrorWarningLine, RiShieldCheckLine, RiAlertLine } from "react-icons/ri";
+import {
+  RiErrorWarningLine,
+  RiShieldCheckLine,
+  RiAlertLine,
+} from "react-icons/ri";
+export const metadata = {
+  title: "disclaimer",
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 
 export default function Disclaimer() {
   return (
@@ -17,10 +28,16 @@ export default function Disclaimer() {
             Disclaimer
           </h1>
           <p className="text-white/90 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto">
-            Important information about the nature and limitations of this website
+            Important information about the nature and limitations of this
+            website
           </p>
           <p className="text-white/80 text-sm">
-            Last Updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+            Last Updated:{" "}
+            {new Date().toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
           </p>
         </div>
       </section>
@@ -28,7 +45,6 @@ export default function Disclaimer() {
       {/* Main Content */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl space-y-12">
-          
           {/* Primary Disclaimer */}
           <div className="bg-amber-50 border-2 border-amber-200 rounded-2xl p-8 shadow-sm">
             <div className="flex items-start gap-4 mb-6">
@@ -41,10 +57,20 @@ export default function Disclaimer() {
                 </h2>
                 <div className="space-y-4 text-slate-700 leading-relaxed">
                   <p>
-                    This website is an <strong>informational platform</strong> designed to help Pakistani citizens understand and navigate the E-Challan system. We provide comprehensive guides, explanations, and resources to assist users in checking and paying their traffic challans online.
+                    This website is an <strong>informational platform</strong>{" "}
+                    designed to help Pakistani citizens understand and navigate
+                    the E-Challan system. We provide comprehensive guides,
+                    explanations, and resources to assist users in checking and
+                    paying their traffic challans online.
                   </p>
                   <p>
-                    <strong>We are not affiliated with, endorsed by, or connected to any government agency, traffic police department, or official E-Challan authority in Pakistan.</strong> This website operates independently as an educational and informational resource.
+                    <strong>
+                      We are not affiliated with, endorsed by, or connected to
+                      any government agency, traffic police department, or
+                      official E-Challan authority in Pakistan.
+                    </strong>{" "}
+                    This website operates independently as an educational and
+                    informational resource.
                   </p>
                 </div>
               </div>
@@ -58,10 +84,14 @@ export default function Disclaimer() {
             </h2>
             <div className="space-y-4 text-slate-700 leading-relaxed">
               <p>
-                <strong>We do not process payments, handle transactions, or store financial information on this website.</strong>
+                <strong>
+                  We do not process payments, handle transactions, or store
+                  financial information on this website.
+                </strong>
               </p>
               <p>
-                For official challan payments and verification, please visit the official government portals:
+                For official challan payments and verification, please visit the
+                official government portals:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
@@ -74,11 +104,20 @@ export default function Disclaimer() {
                     PSCA E-Challan Portal (Punjab)
                   </a>
                 </li>
-                <li>Official provincial traffic police websites for Sindh, KPK, Balochistan, and other regions</li>
-                <li>Authorized payment gateway providers approved by government authorities</li>
+                <li>
+                  Official provincial traffic police websites for Sindh, KPK,
+                  Balochistan, and other regions
+                </li>
+                <li>
+                  Authorized payment gateway providers approved by government
+                  authorities
+                </li>
               </ul>
               <p className="mt-4 text-amber-700 font-medium">
-                ⚠️ All payment transactions must be completed through official government channels or authorized payment gateways. We are not responsible for any transactions conducted on third-party websites.
+                ⚠️ All payment transactions must be completed through official
+                government channels or authorized payment gateways. We are not
+                responsible for any transactions conducted on third-party
+                websites.
               </p>
             </div>
           </div>
@@ -90,7 +129,9 @@ export default function Disclaimer() {
             </h2>
             <div className="space-y-4 text-slate-700 leading-relaxed">
               <p>
-                While we strive to provide accurate and up-to-date information about the E-Challan system, we cannot guarantee that all information on this website is:
+                While we strive to provide accurate and up-to-date information
+                about the E-Challan system, we cannot guarantee that all
+                information on this website is:
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>Complete, accurate, or current</li>
@@ -98,7 +139,10 @@ export default function Disclaimer() {
                 <li>Reflective of the latest policy changes or updates</li>
               </ul>
               <p className="mt-4">
-                <strong>E-Challan regulations, payment methods, and procedures may vary:</strong>
+                <strong>
+                  E-Challan regulations, payment methods, and procedures may
+                  vary:
+                </strong>
               </p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>By province (Punjab, Sindh, KPK, Balochistan)</li>
@@ -106,7 +150,9 @@ export default function Disclaimer() {
                 <li>Over time as policies are updated</li>
               </ul>
               <p className="mt-4 text-slate-600 text-sm italic">
-                We recommend verifying all information with official government sources before making any decisions based on the content provided on this website.
+                We recommend verifying all information with official government
+                sources before making any decisions based on the content
+                provided on this website.
               </p>
             </div>
           </div>
@@ -117,21 +163,23 @@ export default function Disclaimer() {
               Limitation of Liability
             </h2>
             <div className="space-y-4 text-slate-700 leading-relaxed">
-              <p>
-                By using this website, you acknowledge and agree that:
-              </p>
+              <p>By using this website, you acknowledge and agree that:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>We are not liable</strong> for any damages, losses, or consequences resulting from:
+                  <strong>We are not liable</strong> for any damages, losses, or
+                  consequences resulting from:
                   <ul className="list-circle list-inside space-y-1 ml-6 mt-2">
                     <li>Reliance on information provided on this website</li>
                     <li>Use of third-party websites linked from this site</li>
-                    <li>Delays or issues with E-Challan payments or verifications</li>
+                    <li>
+                      Delays or issues with E-Challan payments or verifications
+                    </li>
                     <li>Inaccurate or outdated information</li>
                   </ul>
                 </li>
                 <li>
-                  <strong>We do not guarantee</strong> that this website will be:
+                  <strong>We do not guarantee</strong> that this website will
+                  be:
                   <ul className="list-circle list-inside space-y-1 ml-6 mt-2">
                     <li>Uninterrupted or error-free</li>
                     <li>Free from viruses or harmful components</li>
@@ -160,7 +208,10 @@ export default function Disclaimer() {
                 This website contains links to external websites, including:
               </p>
               <ul className="list-disc list-inside space-y-1 ml-4">
-                <li>Official government portals (PSCA, provincial traffic police websites)</li>
+                <li>
+                  Official government portals (PSCA, provincial traffic police
+                  websites)
+                </li>
                 <li>Authorized payment gateway providers</li>
                 <li>Other informational resources</li>
               </ul>
@@ -168,12 +219,19 @@ export default function Disclaimer() {
                 <strong>We are not responsible for:</strong>
               </p>
               <ul className="list-disc list-inside space-y-1 ml-4">
-                <li>The content, privacy practices, or security of third-party websites</li>
-                <li>Any transactions or activities conducted on external websites</li>
+                <li>
+                  The content, privacy practices, or security of third-party
+                  websites
+                </li>
+                <li>
+                  Any transactions or activities conducted on external websites
+                </li>
                 <li>The availability or functionality of linked websites</li>
               </ul>
               <p className="mt-4 text-slate-600 text-sm italic">
-                We provide these links for convenience only. Your use of third-party websites is at your own risk, and you should review their terms of service and privacy policies.
+                We provide these links for convenience only. Your use of
+                third-party websites is at your own risk, and you should review
+                their terms of service and privacy policies.
               </p>
             </div>
           </div>
@@ -184,25 +242,29 @@ export default function Disclaimer() {
               Form and Redirect Disclaimer
             </h2>
             <div className="space-y-4 text-slate-700 leading-relaxed">
-              <p>
-                When you use the challan search form on this website:
-              </p>
+              <p>When you use the challan search form on this website:</p>
               <ul className="list-disc list-inside space-y-2 ml-4">
                 <li>
-                  <strong>Information entered (CNIC, Challan Number)</strong> is used solely to redirect you to the official government portal
+                  <strong>Information entered (CNIC, Challan Number)</strong> is
+                  used solely to redirect you to the official government portal
                 </li>
                 <li>
-                  <strong>We do not store, save, or process</strong> any information entered in our forms
+                  <strong>We do not store, save, or process</strong> any
+                  information entered in our forms
                 </li>
                 <li>
-                  <strong>You will be redirected</strong> to the official PSCA E-Challan portal or other government websites
+                  <strong>You will be redirected</strong> to the official PSCA
+                  E-Challan portal or other government websites
                 </li>
                 <li>
-                  <strong>All subsequent actions</strong> (searching, viewing, or paying challans) are conducted on official government websites, not on this site
+                  <strong>All subsequent actions</strong> (searching, viewing,
+                  or paying challans) are conducted on official government
+                  websites, not on this site
                 </li>
               </ul>
               <p className="mt-4 text-amber-700 font-medium">
-                ⚠️ Once redirected, you are subject to the terms and privacy policies of the official government websites.
+                ⚠️ Once redirected, you are subject to the terms and privacy
+                policies of the official government websites.
               </p>
             </div>
           </div>
@@ -214,7 +276,9 @@ export default function Disclaimer() {
             </h2>
             <div className="space-y-4 text-slate-700 leading-relaxed">
               <p>
-                The information provided on this website is for <strong>informational and educational purposes only</strong> and does not constitute:
+                The information provided on this website is for{" "}
+                <strong>informational and educational purposes only</strong> and
+                does not constitute:
               </p>
               <ul className="list-disc list-inside space-y-1 ml-4">
                 <li>Legal advice</li>
@@ -223,7 +287,8 @@ export default function Disclaimer() {
                 <li>Financial or payment advice</li>
               </ul>
               <p className="mt-4">
-                If you have specific questions about your E-Challan, payment issues, or legal matters, please consult:
+                If you have specific questions about your E-Challan, payment
+                issues, or legal matters, please consult:
               </p>
               <ul className="list-disc list-inside space-y-1 ml-4">
                 <li>Official government authorities</li>
@@ -240,16 +305,19 @@ export default function Disclaimer() {
               Updates and Changes
             </h2>
             <div className="space-y-4 text-slate-700 leading-relaxed">
-              <p>
-                We reserve the right to:
-              </p>
+              <p>We reserve the right to:</p>
               <ul className="list-disc list-inside space-y-1 ml-4">
-                <li>Modify, update, or remove content on this website at any time</li>
+                <li>
+                  Modify, update, or remove content on this website at any time
+                </li>
                 <li>Update this disclaimer without prior notice</li>
-                <li>Discontinue or suspend the website temporarily or permanently</li>
+                <li>
+                  Discontinue or suspend the website temporarily or permanently
+                </li>
               </ul>
               <p className="mt-4 text-slate-600 text-sm italic">
-                We recommend reviewing this disclaimer periodically to stay informed about our terms and limitations.
+                We recommend reviewing this disclaimer periodically to stay
+                informed about our terms and limitations.
               </p>
             </div>
           </div>
@@ -265,10 +333,13 @@ export default function Disclaimer() {
                   Acceptance of Terms
                 </h2>
                 <p className="text-slate-700 leading-relaxed mb-4">
-                  By accessing and using this website, you acknowledge that you have read, understood, and agree to be bound by this disclaimer and all applicable terms and conditions.
+                  By accessing and using this website, you acknowledge that you
+                  have read, understood, and agree to be bound by this
+                  disclaimer and all applicable terms and conditions.
                 </p>
                 <p className="text-slate-600 text-sm">
-                  If you do not agree with any part of this disclaimer, please do not use this website.
+                  If you do not agree with any part of this disclaimer, please
+                  do not use this website.
                 </p>
               </div>
             </div>
@@ -283,7 +354,8 @@ export default function Disclaimer() {
             Need More Information?
           </h2>
           <p className="text-white/90 text-lg">
-            Visit our About page or check the official government portals for the most current information.
+            Visit our About page or check the official government portals for
+            the most current information.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import NavButton from "./navButton";
 
 const Header = () => {
   return (
@@ -37,44 +38,22 @@ const Header = () => {
           aria-label="Main navigation"
         >
           <Link
-            href="/"
+            href="/about"
             className="text-black/90 hover:text-green-700 transition-colors"
             prefetch={false}
           >
-            PSCE E-Challan{" "}
+            about{" "}
           </Link>
           <Link
-            href="/"
+            href="/contect"
             className="text-black/90 hover:text-green-700 transition-colors"
             prefetch={false}
           >
-            E-Challan Punjab{" "}
+            contect{" "}
           </Link>
-          <Link
-            href="/"
-            className="text-black/90 hover:text-green-700 transition-colors"
-            prefetch={false}
-          >
-            E-Challan Sindh{" "}
-          </Link>
-          <Link
-            href="/#challan-form"
-            className="text-black hover:text-green-700 transition-colors"
-            prefetch={false}
-          >
-            Search Challan
-          </Link>
+
+          <NavButton />
         </nav>
-        <div className="flex gap-3">
-          <div className="hidden sm:block">
-            <Link
-              href="#"
-              className="  text-white bg-blue-500 px-5 py-2 rounded-md text-base "
-            >
-              Sing in
-            </Link>
-          </div>
-        </div>
 
         {/* Mobile Menu Button */}
         <button

@@ -1,30 +1,25 @@
-"use client";
 
-import { useCallback } from "react";
-import Image from "next/image";
+// import Image from "next/image";
+import HeroButton from "./heroButton";
 
 const Hero = () => {
-  const scrollToForm = useCallback(() => {
-    const formElement = document.getElementById("challan-form");
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-  }, []);
+
 
   return (
     <section
       id="hero"
-      className="relative px-2 lg:px-32 py-20 lg:py-28 overflow-hidden"
+      className="relative px-2 lg:px-32 py-20 lg:py-28 overflow-hidden bg-blue-900"
     >
-      <Image
+      {/* <Image
         src="/heroBackgound.png"
         alt="Check E Challan Online Pakistan"
         fill
         priority
+        quality={50}
         fetchPriority="high"
         sizes="100vw"
         className="object-cover"
-      />
+      /> */}
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 to-slate-900/40"></div>
@@ -43,13 +38,7 @@ const Hero = () => {
           phone.
         </p>
 
-        <button
-          onClick={scrollToForm}
-          className="text-white bg-blue-600 hover:bg-blue-700 py-3 px-8 rounded-md font-medium text-base transition-colors shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-          aria-label="Scroll to challan search form"
-        >
-          Check Challan
-        </button>
+       <HeroButton/>
       </div>
     </section>
   );
