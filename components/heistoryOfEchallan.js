@@ -1,3 +1,9 @@
+export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 const HistoryChallan = () => {
   return (
     <section className="px-4 py-12 sm:px-6 lg:px-8">

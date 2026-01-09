@@ -1,3 +1,9 @@
+export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 const WhatIfWrongChallan = () => {
   return (
     <article className="max-w-4xl mx-auto px-4 py-20 text-slate-800 space-y-8">

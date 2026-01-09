@@ -2,12 +2,11 @@ import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Suspense } from "react";
 
-// Critical above-the-fold components - load immediately
 import Hero from "@/components/HeroSection";
 import CheckChallan from "@/components/CheckChallanSection";
 import LastSection from "@/components/LastSection";
 
-// Below-the-fold components - lazy load with loading states
+const PayChallan = dynamic(() => import("../components/PayChallanSection"));
 const EChallanForm = dynamic(() => import("../components/EChallanForm"), {
   loading: () => (
     <section className="bg-blue-600 py-12 md:py-32 flex items-center px-4 flex-col gap-20">
@@ -67,6 +66,8 @@ export default function Home() {
           />
         </div>
       </figure>
+      <PayChallan />
+
       <Suspense fallback={null}>
         <FeatureCardsSection />
       </Suspense>

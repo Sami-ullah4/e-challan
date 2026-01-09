@@ -1,3 +1,9 @@
+export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 const PayChallan = () => {
   const jazzCashSteps = [
     "Open your JazzCash mobile app.",
@@ -33,15 +39,9 @@ const PayChallan = () => {
   };
 
   return (
-    <section
-      id="pay-challan"
-      className="bg-gradient-to-b from-slate-100 via-slate-50 to-white py-14 sm:py-20"
-    >
+    <section id="pay-challan" className="py-5 md:py-10">
       {/* Heading */}
       <div className="mx-auto mb-10 max-w-3xl space-y-4 px-4 text-center sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-          Step 3 • Pay securely
-        </p>
         <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl md:text-4xl">
           How to Pay E-Challan in Pakistan?
         </h2>
@@ -53,18 +53,14 @@ const PayChallan = () => {
       </div>
 
       {/* Payment Cards */}
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-2 lg:px-8">
+      <div className="flex flex-col md:flex-row px-2 lg:px-32 gap-3 ">
         {/* JazzCash */}
-        <div className="flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-sm shadow-slate-200">
+        <div className="flex-1/2 flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-sm shadow-slate-200">
           <div className="flex items-center justify-between gap-3">
-            <div className="text-left">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-600">
-                Digital wallet
-              </p>
-              <h3 className="text-xl font-semibold text-slate-900">
-                Pay via JazzCash
-              </h3>
-            </div>
+            <h3 className="text-xl font-semibold text-slate-900">
+              Pay via JazzCash
+            </h3>
+
             <span className="rounded-full bg-orange-50 px-3 py-1 text-xs font-medium text-orange-700">
               Recommended
             </span>
@@ -74,16 +70,11 @@ const PayChallan = () => {
         </div>
 
         {/* Easypaisa */}
-        <div className="flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-sm shadow-slate-200">
+        <div className="flex-1/2 flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-sm shadow-slate-200">
           <div className="flex items-center justify-between gap-3">
-            <div className="text-left">
-              <p className="text-xs font-medium uppercase tracking-[0.16em] text-sky-600">
-                Digital wallet
-              </p>
-              <h3 className="text-xl font-semibold text-slate-900">
-                Pay via Easypaisa
-              </h3>
-            </div>
+            <h3 className="text-xl font-semibold text-slate-900">
+              Pay via Easypaisa
+            </h3>
             <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-medium text-emerald-700">
               Popular
             </span>

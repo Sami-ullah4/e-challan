@@ -1,3 +1,10 @@
+export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
+
 const PayChallanBank = () => {
   const bankSteps = [
     "Launch your bank app or visit the official website.",
@@ -35,15 +42,9 @@ const PayChallanBank = () => {
   };
 
   return (
-    <section
-      id="pay-challan-bank"
-      className="bg-gradient-to-b from-white via-slate-50 to-white py-14 sm:py-20"
-    >
+    <section id="pay-challan-bank" className="py-14 sm:py-20">
       {/* Heading */}
       <div className="mx-auto mb-10 max-w-3xl space-y-4 px-4 text-center sm:px-6 lg:px-8">
-        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">
-          Alternative payment option
-        </p>
         <h2 className="text-2xl font-semibold text-slate-900 sm:text-3xl md:text-4xl">
           How to Pay E-Challan with a Bank Account?
         </h2>
@@ -55,17 +56,12 @@ const PayChallanBank = () => {
       </div>
 
       {/* Two-column layout: steps + banks list */}
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 px-4 sm:px-6 md:grid-cols-[1.7fr,1.3fr] lg:px-8">
+      <div className="mx-auto flex flex-col gap-9 px-2 lg:px-32 grid-cols-1">
         {/* Payment Steps Card */}
         <div className="flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-sm shadow-slate-200">
-          <div className="text-left">
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-blue-600">
-              Bank payment
-            </p>
-            <h3 className="text-xl font-semibold text-slate-900">
-              Pay via your bank app or website
-            </h3>
-          </div>
+          <h3 className="text-xl font-semibold text-slate-900">
+            Pay via your bank app or website
+          </h3>
           <p className="text-sm text-slate-600 sm:text-base">
             The major banks of Pakistan have a challan payment option. Follow
             these simple steps to pay through your bank:
@@ -75,14 +71,10 @@ const PayChallanBank = () => {
 
         {/* Banks List Card */}
         <div className="flex flex-col gap-4 rounded-2xl border border-slate-100 bg-white/90 p-6 shadow-sm shadow-slate-200">
-          <div className="text-left">
-            <p className="text-xs font-medium uppercase tracking-[0.16em] text-blue-600">
-              Supported banks
-            </p>
-            <h3 className="text-xl font-semibold text-slate-900">
-              Banks that support E-Challan
-            </h3>
-          </div>
+          <h3 className="text-xl font-semibold text-slate-900">
+            Banks that support E-Challan
+          </h3>
+
           <p className="text-sm text-slate-600 sm:text-base">
             These banks typically offer E-Challan options inside their bill
             payment or government payments sections:
