@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
-import { Suspense } from "react";
+import Script from "next/script";
 
 /* ---------------- SEO METADATA ---------------- */
 
@@ -70,7 +70,7 @@ export const metadata = {
   },
 };
 
-/* ---------------- VIEWPORT (CORRECT WAY) ---------------- */
+/* ---------------- VIEWPORT ---------------- */
 
 export const viewport = {
   width: "device-width",
@@ -81,37 +81,32 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en-PK" style={{ colorScheme: "light only" }}>
+    <html lang="en" style={{ colorScheme: "light" }}>
       <head>
+        {/* ================= BASIC META ================= */}
+        <meta charSet="utf-8" />
         <meta name="theme-color" content="#ffffff" />
         <meta name="color-scheme" content="light only" />
+        <meta name="supported-color-schemes" content="light" />
 
-        {/* Performance Optimizations */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
+        {/* ================= SECURITY META ================= */}
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+        {/* ================= PERFORMANCE ================= */}
+        {/* DNS prefetch for official government resources */}
         <link rel="dns-prefetch" href="https://echallan.psca.gop.pk" />
         <link rel="dns-prefetch" href="https://www.nadra.gov.pk" />
 
-        <link rel="preload" href="/logo.webp" as="image" type="image/webp" />
-      </head>
+        {/* ================= GOOGLE ADSENSE ================= */}
+        {/* Correct placement & strategy (required for AdSense approval) */}
+        <Script
+          strategy="afterInteractive"
+          src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.NEXT_PUBLIC_GOOGLE_ADSENSE_PUBLISHER_ID}`}
+          crossOrigin="anonymous"
+        />
 
-      <body className="bg-white text-gray-900 antialiased">
-        {/* Header should NOT be lazy for SEO */}
-        <Header />
-
-        <main className="min-h-screen">{children}</main>
-
-        {/* Footer with SSR (important for internal links & trust) */}
-        <Suspense fallback={null}>
-          <Footer />
-        </Suspense>
-
-        {/* -------- STRUCTURED DATA -------- */}
+        {/* ================= STRUCTURED DATA ================= */}
 
         {/* Website Schema */}
         <script
@@ -123,7 +118,15 @@ export default function RootLayout({ children }) {
               name: "E-Challan Pakistan",
               url: "https://echallan-pakistan.com",
               description:
-                "Check and pay your E-Challan online in Pakistan. Informational guide for traffic challans.",
+                "Check and understand E-Challan in Pakistan. Informational guide for traffic challans.",
+              publisher: {
+                "@type": "Organization",
+                name: "E-Challan Pakistan",
+                logo: {
+                  "@type": "ImageObject",
+                  url: "https://echallan-pakistan.com/logo.webp",
+                },
+              },
               potentialAction: {
                 "@type": "SearchAction",
                 target:
@@ -144,10 +147,26 @@ export default function RootLayout({ children }) {
               name: "E-Challan Pakistan",
               url: "https://echallan-pakistan.com",
               logo: "https://echallan-pakistan.com/logo.webp",
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "customer support",
+                areaServed: "PK",
+                availableLanguage: ["en", "ur"],
+              },
               sameAs: [],
             }),
           }}
         />
+      </head>
+
+      <body className="bg-white text-gray-900 antialiased">
+        {/* Header must NOT be lazy-loaded for SEO */}
+        <Header />
+
+        <main className="min-h-screen">{children}</main>
+
+        {/* Footer should remain SSR for trust & internal linking */}
+        <Footer />
       </body>
     </html>
   );
