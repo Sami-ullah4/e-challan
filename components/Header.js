@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import NavButton from "./navButton";
 
 const Header = () => {
   return (
@@ -19,6 +18,7 @@ const Header = () => {
               alt="e-Challan Logo"
               width={42}
               height={42}
+              quality={75}
               className="object-contain"
               priority
               fetchPriority="high"
@@ -52,7 +52,6 @@ const Header = () => {
             contect{" "}
           </Link>
 
-          <NavButton />
         </nav>
 
         {/* Mobile Menu Button */}
