@@ -45,13 +45,15 @@ const Header = () => {
             about{" "}
           </Link>
           <Link
-            href="/contect"
+            href="/"
             className="text-black/90 hover:text-green-700 transition-colors"
             prefetch={false}
           >
-            contect{" "}
+            home{" "}
           </Link>
-
+          <button className="bg-[#3467e8] rounded-md px-3 py-1 font-normal text-base text-white  ">
+            sing in
+          </button>
         </nav>
 
         {/* Mobile Menu Button */}

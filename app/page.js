@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 import Hero from "@/components/HeroSection";
-import CheckChallan from "@/components/CheckChallanSection";
+// import CheckChallan from "@/components/CheckChallanSection";
 import dynamic from "next/dynamic";
-
+ const CheckChallan = dynamic(()=>import("../components/CheckChallanSection"))
 const EChallanForm = dynamic(() => import("../components/EChallanForm"), {
   loading: () => <div>Loading form...</div>,
 });
